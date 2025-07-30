@@ -8,13 +8,14 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Abdullah store </Text>
-      <Text> cocees and breads </Text>
+      <Text style={{ fontSize: 30, fontWeight: "bold" }}> Abdullah store </Text>
+      <Text style={{ fontSize: 15 }}> cocees and breads </Text>
       <Image
         source={{
-          uri: "https://img.youm7.com/ArticleImgs/2017/7/13/73264-%D8%B7%D8%B1%D9%8A%D9%82%D8%A9-%D8%A7%D9%84%D9%83%D9%88%D9%83%D9%8A%D8%B2.jpg",
+          uri: "https://media-cdn.tripadvisor.com/media/photo-s/08/a6/b5/17/great-american-cookies.jpg",
         }}
-        style={{ width: 100, height: 70 }}
+        style={{ width: 300, height: 170 }}
+        //
       />
     </View>
   );
