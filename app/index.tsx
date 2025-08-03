@@ -69,15 +69,14 @@
 //     </View>
 //   );
 // }
+import ProductItem from "@/Components/ProductItem";
 import { Image, Text, View } from "react-native";
-
 export default function Index() {
   return (
     <View style={{ flex: 1 }}>
       {/* First section */}
       <View
         style={{
-          flex: 1,
           alignItems: "center",
           margin: 10,
         }}
@@ -93,36 +92,15 @@ export default function Index() {
           style={{ margin: 10, width: 200, height: 200 }}
         />
       </View>
-
+      {/* Item 1 */}
       <View
         style={{
           flexDirection: "row",
+          alignItems: "center",
           justifyContent: "center",
-          flexShrink: 1,
-          margin: 200,
         }}
       >
-        {/* Item 1 */}
-        <View
-          style={{
-            alignItems: "center",
-            margin: 10,
-          }}
-        >
-          <Image
-            source={{
-              uri: "https://t4.ftcdn.net/jpg/06/76/66/39/360_F_676663959_jcE1oIYNF9qgx7FTSSMy6DHxsRkFHTyO.jpg",
-            }}
-            style={{ width: 150, height: 150 }}
-          />
-          <Text style={{ marginTop: 10, fontSize: 20, fontWeight: "bold" }}>
-            Normal Cookies
-          </Text>
-          <Text style={{ fontSize: 16 }}>Price: $2</Text>
-        </View>
-
-        {/* Item 2 */}
-        <View
+        {/* <View
           style={{
             alignItems: "center",
             margin: 10,
@@ -138,8 +116,17 @@ export default function Index() {
             dark Cookies
           </Text>
           <Text style={{ fontSize: 16 }}>Price: $4</Text>
-        </View>
+        </View> */}
+
+        {/* Item 2 */}
+        <View
+          style={{
+            alignItems: "center",
+            margin: 10,
+          }}
+        ></View>
       </View>
+      <ProductItem />
     </View>
   );
 }
