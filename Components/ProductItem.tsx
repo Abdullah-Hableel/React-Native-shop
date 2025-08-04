@@ -3,11 +3,22 @@ import { Image, StyleSheet, Text, View } from "react-native";
 interface ProductProps {
   name: string;
   cokeisImage: string;
+  title: string;
+  price: number;
+  image: string;
 }
-
-const ProductItem = ({ name, cokeisImage }: ProductProps) => {
+const ProductItem = ({
+  name,
+  cokeisImage,
+  title,
+  price,
+  image,
+}: ProductProps) => {
   console.log(name);
   console.log(cokeisImage);
+  console.log(title);
+  console.log(price);
+  console.log(image);
 
   return (
     <View

@@ -99,8 +99,9 @@
 //           alignItems: "center",
 //           justifyContent: "center",
 //         }}
-      >
-        {/* <View
+// >
+{
+  /* <View
           style={{
             alignItems: "center",
             margin: 10,
@@ -116,10 +117,14 @@
             dark Cookies
           </Text>
           <Text style={{ fontSize: 16 }}>Price: $4</Text>
-        </View> */}
+        </View> */
+}
 
-        {/* Item 2 */}
-        {/* <View
+{
+  /* Item 2 */
+}
+{
+  /* <View
           style={{
             alignItems: "center",
             margin: 20,
@@ -142,17 +147,18 @@
       </View>
     </View>
   );
-} */}
+} */
+}
 // index.tsx
 
-import { Image, Text, View, ScrollView } from "react-native";
-import ProductItem from "../components/ProductItem";
-import { Products } from "../data/Products"; 
+import { Image, ScrollView, Text, View } from "react-native";
+// import ProductItem from "../components/ProductItem";
+import ProductItem from "@/Components/ProductItem";
+import { Products } from "../data/Products";
 
 export default function Index() {
   return (
     <ScrollView style={{ flex: 1 }}>
-      
       <View style={{ alignItems: "center", margin: 10 }}>
         <Text style={{ margin: 10, fontSize: 30, fontWeight: "bold" }}>
           abdullah store
@@ -166,14 +172,21 @@ export default function Index() {
         />
       </View>
 
-      {/* عرض المنتجات ديناميكياً */}
-      <View style={{ flexDirection: "row", justifyContent: "center", flexWrap: "wrap" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
         {Products.map((item) => (
           <ProductItem
             key={item.id}
             title={item.title}
             price={item.price}
             image={item.image}
+            name={""}
+            cokeisImage={""}
           />
         ))}
       </View>
