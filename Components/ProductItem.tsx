@@ -1,25 +1,11 @@
+import { Product } from "@/data/products";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
-interface ProductProps {
-  name: string;
-  cokeisImage: string;
-  title: string;
-  price: number;
-  image: string;
-}
-const ProductItem = ({
-  name,
-  cokeisImage,
-  title,
-  price,
-  image,
-}: ProductProps) => {
-  console.log(name);
-  console.log(cokeisImage);
-  console.log(title);
-  console.log(price);
-  console.log(image);
 
+interface ProductProp {
+  product: Product;
+}
+const ProductItem = ({ product }: ProductProp) => {
   return (
     <View
       style={{
@@ -31,14 +17,14 @@ const ProductItem = ({
     >
       <Image
         source={{
-          uri: cokeisImage,
+          uri: product.image,
         }}
         style={{ width: 150, height: 150 }}
       />
       <Text style={{ marginTop: 10, fontSize: 20, fontWeight: "bold" }}>
-        {name}
+        {product.title}
       </Text>
-      <Text style={{ fontSize: 16 }}>Price: $4</Text>
+      <Text style={{ fontSize: 16 }}>{product.price} $</Text>
     </View>
   );
 };

@@ -154,7 +154,7 @@
 import { Image, ScrollView, Text, View } from "react-native";
 // import ProductItem from "../components/ProductItem";
 import ProductItem from "@/Components/ProductItem";
-import { Products } from "../data/Products";
+import products from "@/data/products";
 
 export default function Index() {
   return (
@@ -179,15 +179,8 @@ export default function Index() {
           flexWrap: "wrap",
         }}
       >
-        {Products.map((item) => (
-          <ProductItem
-            key={item.id}
-            title={item.title}
-            price={item.price}
-            image={item.image}
-            name={""}
-            cokeisImage={""}
-          />
+        {products.map((item) => (
+          <ProductItem key={item.id} product={item} />
         ))}
       </View>
     </ScrollView>
